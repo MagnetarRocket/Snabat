@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h> 
-#include<err.h>
+//#include<err.h>
 #include<time.h>
 //random > rand
 //© MagnetarRocket 2023
@@ -18,19 +18,21 @@
 
 	}
 }*/
+FILE* dump;
+char blurt;
+int fileLines = 0, lotsPick = 0;
+char WorkingFile[];
+
 //int Main(int argc, char **argsv)
 int Main(int argc, char *argsv[])
 {
 	//need to dump in the file name from args
-
-	FILE* dump;//
-	char blurt;
+	printf("arguements: %d", argc);
+	printf("argv's: %d", argc);
 	srandom(time(0));
 	//srand( time(0) );
 	/*while()
 	{}*/
-
-	int fileLines = 0, lotsPick = 0;
 	
 	/*while (EOF != (scanf ("%*[^\n]"), scanf("%[^\n]") ) )
 	{  
@@ -44,8 +46,7 @@ int Main(int argc, char *argsv[])
 			fileLines++;
 		}
 	}*/
-	
-	//char ;
+
 	for(int bee = 0; bee <= argsv; bee++)
 	{
 		dump = fopen(argsv[bee], "r");
@@ -53,16 +54,18 @@ int Main(int argc, char *argsv[])
 		printf("%s was not found, contuining on…", dump);
 		else
 		{
-			for (blurt = getc(dump);blurt != EOF;)
+			/*for (blurt = getc(dump);blurt != EOF;)
 			{
 				if (blurt == '\n')
 				{
 					fileLines++;
 				}
-			}
+
+			}*/
+
 		}
 		lotsPick = random() % fileLines;
-		printf();
+		printf(dump[lotsPick]);
 
 		fclose(dump);
 		fileLines = 0;
