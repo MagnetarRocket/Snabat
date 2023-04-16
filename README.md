@@ -1,11 +1,14 @@
 # Snabat
+
 Grab a random line from a given file(s), and it outputs it to stdout. Cuts down on the need for scripts.
 
 ## Compiling
 
+This uses all the standard libaries and is not an graphical app, should be easy to compile on an standards compliant unix system, give me a howler if something breaks.
+
 ## Usage
 
-Snabat File.1 File.2
+`Snabat File.1 File.2`
 
 Options-
 
@@ -32,3 +35,6 @@ Options-
 * -Y
 	
 	Outputs list randomly with exectly one unique line.
+
+## Bugs
+
