@@ -65,7 +65,7 @@ int Main(int argc, char *argsv[])
 
 		}
 		lotsPick = random() % fileLines;
-		printf(dump[lotsPick]);
+		printf(*dump[lotsPick]);
 
 		fclose(dump);
 		fileLines = 0;
